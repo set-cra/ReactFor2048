@@ -1,0 +1,61 @@
+.row{
+    width: 200px;
+    background:orange;
+    margin: 0 auto;
+    display: flex;
+    height: 50px;
+    font-size: 25px;
+    .cell{
+        width: 50px;
+        border:5px solid #000;
+        line-height: 40px;
+        &:not(:nth-child(4n)){
+            border-right: none;
+        }
+    }
+    &:not(:first-child){
+        .cell{
+            border-top: none;
+        }
+    }
+    .cell-16,
+    .cell-32,
+    .cell-64{
+        font-size: 20px;
+        background: blanchedalmond;
+    }
+    .cell-128,
+    .cell-512,
+    .cell-256{
+        background: yellowgreen;
+        font-size: 15px;
+    }
+
+    .cell-1024,
+    .cell-2048{
+        background: red;
+        font-size: white;
+        font-size: 10px;
+        font-weight: bold;
+    }
+}
+.failed{
+    background: #444;
+    width: 100%;
+    position: fixed;
+    top:0;
+    height: 220px;
+    line-height:220px;
+    opacity: 0.8;
+    .reset{
+        display: inline-block;
+        position: absolute;
+        color: red;
+        text-align: center;
+        left:50%;
+        top:50%;
+        width: 100px;
+        margin-left: -50px;
+        margin-top:-50px;
+    }
+}
